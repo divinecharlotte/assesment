@@ -1,121 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
+  <body>
+    <div class="form" id="form1">
+      <h3>Business Owner Details</h3>
 
-<body>
-  <div class="form" id="form1">
-    <h3>Business Owner Details</h3>
+      <p>Application Citizenship</p>
+      <form>
+        <label for="citizenship">Citizenship:</label>
+        <select name="citizenship" id="citizenship" class="user-input" required>
+          <option value="" disabled selected>Select your citizenship</option>
+          <option value="rwandan">Rwandan</option>
+          <option value="foreigner">Foreigner</option>
+        </select>
 
-    <p>Application Citizenship</p>
+        <div class="phoneEmail">
+          <div>
+            <p>Phone Number</p>
 
-    <form>
-      <label for="citizenship">Citizenship:</label>
-      <select name="citizenship" id="citizenship" class="user-input" required>
-        <option value="" disabled selected>Select your citizenship</option>
-        <option value="rwandan">Rwandan</option>
-        <option value="foreigner">Foreigner</option>
-      </select>
+            <label for="phonePrefix">Phone Number:</label>
+            <select
+              name="phonePrefix"
+              id="phonePrefix"
+              class="user-input"
+              required
+            >
+              <option class="phone-hint" value="" disabled selected>
+                +250
+              </option>
+            </select>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              class="user-input"
+              placeholder="+250 782971843"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
+          </div>
 
-      <div class="phoneEmail">
-        <div>
-          <p>Phone Number</p>
-
-          <label for="phonePrefix">Phone Number:</label>
-          <select name="phonePrefix" id="phonePrefix" class="user-input" required>
-            <option class="phone-hint" value="" disabled selected>+250</option>
-          </select>
-          <input type="tel" id="phoneNumber" name="phoneNumber" class="user-input"
-            placeholder="+250 782971843" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+          <div>
+            <p>Email Address</p>
+            <input
+              type="email"
+              id="emailAddress"
+              name="emailAddress"
+              class="user-input"
+              placeholder="Enter email address"
+              required
+            />
+          </div>
         </div>
 
-        <div>
-          <p>Email Address</p>
-          <input type="email" id="emailAddress" name="emailAddress" class="user-input"
-            placeholder="Enter email address" required />
-        </div>
-      </div>
+        <h3>Business Owner Address</h3>
 
-      <h3>Business Owner Address</h3>
+        <p>province</p>
 
-      <p>province</p>
-
-      <select name="addressCitizenship" id="addressCitizenship" class="user-input" required>
-        <option value="" disabled selected>Select province</option>
-        <option value="rwandan">Rwandan</option>
-        <option value="foreigner">Foreigner</option>
-      </select>
-
-      <h3>Business Details</h3>
-
-      <div class="phoneEmail">
-        <div>
-          <p>business type</p>
-
-          <select name="businessType" id="businessType" class="user-input" required>
-            <option value="" disabled selected>Select business type</option>
-            <option value="rwandan">Rwandan</option>
-            <option value="foreigner">Foreigner</option>
-          </select>
-        </div>
-        <div>
-          <p>Company Name</p>
-          <input type="text" id="companyName" name="companyName" class="user-input"
-            placeholder="Enter company name" required />
-        </div>
-      </div>
-      <div class="phoneEmail">
-        <div>
-          <p>TIN number</p>
-
-          <input type="text" id="tinNumber" name="tinNumber" class="user-input"
-            placeholder="Enter TIN number" required />
-        </div>
-        <div>
-          <p>Registration Date</p>
-          <input type="date" id="registrationDate" name="registrationDate" class="user-input" required />
-        </div>
-      </div>
-
-      <div>
-        <p>Business Address</p>
-
-        <select name="businessAddress" id="businessAddress" class="user-input" required>
+        <select
+          name="addressCitizenship"
+          id="addressCitizenship"
+          class="user-input"
+          required
+        >
           <option value="" disabled selected>Select province</option>
           <option value="rwandan">Rwandan</option>
           <option value="foreigner">Foreigner</option>
         </select>
-      </div>
 
-      <h3>Importation Details</h3>
+        <h3>Business Details</h3>
 
-      <p>Purpose of Importation</p>
+        <div class="phoneEmail">
+          <div>
+            <p>business type</p>
 
-      <select name="importationPurpose" id="importationPurpose" class="user-input" required>
-        <option value="" disabled selected>Enter the purpose of importation</option>
-        <option value="rwandan">Rwandan</option>
-        <option value="foreigner">Foreigner</option>
-      </select>
+            <select
+              name="businessType"
+              id="businessType"
+              class="user-input"
+              required
+            >
+              <option value="" disabled selected>Select business type</option>
+              <option value="rwandan">Rwandan</option>
+              <option value="foreigner">Foreigner</option>
+            </select>
+          </div>
+          <div>
+            <p>Company Name</p>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              class="user-input"
+              placeholder="Enter company name"
+              required
+            />
+          </div>
+        </div>
+        <div class="phoneEmail">
+          <div>
+            <p>TIN number</p>
 
-      <h3>Product Details</h3>
+            <input
+              type="text"
+              id="tinNumber"
+              name="tinNumber"
+              class="user-input"
+              placeholder="Enter TIN number"
+              required
+            />
+          </div>
+          <div>
+            <p>Registration Date</p>
+            <input
+              type="date"
+              id="registrationDate"
+              name="registrationDate"
+              class="user-input"
+              required
+            />
+          </div>
+        </div>
 
-      <p>Product Category</p>
+        <div>
+          <p>Business Address</p>
 
-      <select name="productCategory" id="productCategory" class="user-input" required>
-        <option value="" disabled selected>Enter the product category</option>
-        <option value="rwandan">Rwandan</option>
-        <option value="foreigner">Foreigner</option>
-      </select>
-      <button type="button" onclick="getDataAndLogPayload(3)">Send</button>
-    </form>
-  </div>
+          <select
+            name="businessAddress"
+            id="businessAddress"
+            class="user-input"
+            required
+          >
+            <option value="" disabled selected>Select province</option>
+            <option value="rwandan">Rwandan</option>
+            <option value="foreigner">Foreigner</option>
+          </select>
+        </div>
 
-  <script src="index.js"></script>
-</body>
+        <h3>Importation Details</h3>
 
+        <p>Purpose of Importation</p>
+
+        <select
+          name="importationPurpose"
+          id="importationPurpose"
+          class="user-input"
+          required
+        >
+          <option value="" disabled selected>
+            Enter the purpose of importation
+          </option>
+          <option value="rwandan">Rwandan</option>
+          <option value="foreigner">Foreigner</option>
+        </select>
+
+        <h3>Product Details</h3>
+
+        <p>Product Category</p>
+
+        <select
+          name="productCategory"
+          id="productCategory"
+          class="user-input"
+          required
+        >
+          <option value="" disabled selected>Enter the product category</option>
+          <option value="rwandan">Rwandan</option>
+          <option value="foreigner">Foreigner</option>
+        </select>
+        <button type="button" onclick="getDataAndLogPayload()">Send</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
 </html>

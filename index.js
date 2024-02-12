@@ -20,5 +20,18 @@ function getDataAndLogPayload() {
 
   payload.productCategory = document.getElementById("productCategory").value;
 
-  console.log( " Payload:", payload);
+  console.log(" Payload:", payload);
+
+  fetch("https://formspree.io/f/mqkngenv", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Formspree response:", data);
+    })
+    .catch((error) => console.error("Error sending data to Formspree:", error));
 }
