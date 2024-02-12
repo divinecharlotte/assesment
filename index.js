@@ -20,5 +20,5 @@ function getDataAndLogPayload() {
 
   payload.productCategory = document.getElementById("productCategory").value;
 
-  console.log("Form " + " Payload:", payload);
+  console.log( " Payload:", payload);
 }
