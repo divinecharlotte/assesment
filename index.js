@@ -1,34 +1,24 @@
 function getDataAndLogPayload() {
+  var payload = {};
 
-    let citizenship = document.querySelector('select[name="citizenship"]').value;
-    let phoneNumberPrefix = document.querySelector('select[name="phonePrefix"]').value;
-    let phoneNumber = document.getElementById('phoneNumber').value;
-    let emailAddress = document.getElementById('emailAddress').value;
-    let province = document.getElementById('province').value;
-    let addressCitizenship = document.querySelector('select[name="addressCitizenship"]').value;
+  payload.citizenship = document.getElementById("citizenship").value;
+  payload.phonePrefix = document.getElementById("phonePrefix").value;
+  payload.phoneNumber = document.getElementById("phoneNumber").value;
+  payload.emailAddress = document.getElementById("emailAddress").value;
 
-    let payload = {
-      citizenship: citizenship,
-      phoneNumberPrefix: phoneNumberPrefix,
-      phoneNumber: phoneNumber,
-      emailAddress: emailAddress,
-      province: province,
-      addressCitizenship: addressCitizenship
-    };
-  
+  payload.addressCitizenship =
+    document.getElementById("addressCitizenship").value;
 
-    console.log('Payload:', payload);
-  
+  payload.businessType = document.getElementById("businessType").value;
+  payload.companyName = document.getElementById("companyName").value;
+  payload.tinNumber = document.getElementById("tinNumber").value;
+  payload.registrationDate = document.getElementById("registrationDate").value;
+  payload.businessAddress = document.getElementById("businessAddress").value;
 
-  }
-  
+  payload.importationPurpose =
+    document.getElementById("importationPurpose").value;
 
+  payload.productCategory = document.getElementById("productCategory").value;
 
-
-
-  
-
-
-
-  
-  
+  console.log("Form " + " Payload:", payload);
+}
