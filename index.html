@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h3>Business Owner Details</h3>
+
+  <p>Application Citizenship</p>
+
+  <form>
+    <label for="citizenship">Citizenship:</label>
+    <select name="citizenship" required>
+      <option value="" disabled selected>Select your citizenship</option>
+      <option value="rwandan">Rwandan</option>
+      <option value="foreigner">Foreigner</option>
+    </select>
+
+    <p>Phone Number</p>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <select name="phonePrefix" required>
+      <option class="phone-hint" value="" disabled selected>+250</option>
+    </select>
+    <input
+      type="tel"
+      id="phoneNumber"
+      name="phoneNumber"
+      placeholder="+250 782971843"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+      required
+    />
+
+    <p>Email Address</p>
+    <input
+      type="email"
+      id="emailAddress"
+      name="emailAddress"
+      placeholder="Enter email address"
+      required
+    />
+
+    <p>Province</p>
+    <label for="province">Province:</label><br />
+    <input type="text" id="province" name="province" required /><br />
+
+    <h3>Business Owner Address</h3>
+
+    <p>Application Citizenship</p>
+
+    <select name="addressCitizenship" required>
+      <option value="" disabled selected>Select province</option>
+      <option value="rwandan">Rwandan</option>
+      <option value="foreigner">Foreigner</option>
+    </select>
+
+    <button type="button" onclick="getDataAndLogPayload()">send</button>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>

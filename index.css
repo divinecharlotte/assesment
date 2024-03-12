@@ -1,0 +1,17 @@
+.phone-hint {
+    border:none
+    color(srgb red green blue)
+}
+body{
+    padding: 20px;
+    margin: 20px;
+    border:rgb(106, 106, 199) solid  2px;
+    border-radius: 10px;
+}
+p{
+    font-weight: bold;
+}
+.phoneEmail{
+    display: flex;
+    gap: 20px;
+}
