@@ -1,5 +1,5 @@
 function getDataAndLogPayload() {
-  var payload = {};
+  let payload = {};
 
   payload.citizenship = document.getElementById("citizenship").value;
   payload.phonePrefix = document.getElementById("phonePrefix").value;
